@@ -1,0 +1,12 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: nginx
+  namespace: gitops-demo-app
+spec:
+  host: nginx-gitops-demo-app.apps.pascal-okd.appalia.net
+  to:
+    kind: Service
+    name: nginx
+  port:
+    targetPort: 8080
